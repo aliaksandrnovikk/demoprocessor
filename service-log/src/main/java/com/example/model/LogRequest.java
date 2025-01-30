@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.util.List;
 import lombok.Data;
 import lombok.ToString;
 
@@ -7,6 +8,7 @@ import lombok.ToString;
 @ToString
 public class LogRequest {
 
-    private String message;
+    private int number;
     private String timestamp;
+    private List<Integer> shuffledNumbers;
 }

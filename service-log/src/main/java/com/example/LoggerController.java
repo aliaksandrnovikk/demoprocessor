@@ -13,7 +13,8 @@ public class LoggerController {
 
     @PostMapping("/log")
     public String logRequest(@RequestBody LogRequest logRequest) {
-        System.out.println("Logged Data: " + logRequest.toString());
+        System.out.println("Logging Request: Number - " + logRequest.getNumber() +
+                ", Shuffled Numbers - " + logRequest.getShuffledNumbers());
         return "Data logged successfully: " + logRequest;
     }
 }
