@@ -2,19 +2,21 @@ package com.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.example.shuffle.ShufflerService;
+import com.example.service.shuffler.ShufflerServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ShuffleServiceTest {
 
-    private ShufflerService shuffleService;
+    @Autowired
+    private ShufflerServiceImpl shuffleService;
 
     @BeforeEach
     public void setUp() {
-        shuffleService = new ShufflerService();
+        shuffleService = new ShufflerServiceImpl();
     }
 
     @Test
@@ -60,5 +62,4 @@ public class ShuffleServiceTest {
 
         assertEquals("Number must be between 1 and 1000", exception.getMessage());
     }
-
 }
