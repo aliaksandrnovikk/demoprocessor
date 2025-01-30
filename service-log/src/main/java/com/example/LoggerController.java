@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class LoggerController {
 
-
     @PostMapping("/log")
-    public String logRequest(@RequestBody LogRequest logRequest) {
+    public Object logRequest(@RequestBody LogRequest logRequest) {
         System.out.println("Logging Request: Number - " + logRequest.getNumber() +
                 ", Shuffled Numbers - " + logRequest.getShuffledNumbers());
         return "Data logged successfully: " + logRequest;
