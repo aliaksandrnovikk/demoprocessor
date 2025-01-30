@@ -1,8 +1,6 @@
 package com.example.requestlogging;
 
 import com.example.dto.CreateShuffledConsequenceRequest;
-import com.example.dto.CreateShuffledConsequenceResponse;
-import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
